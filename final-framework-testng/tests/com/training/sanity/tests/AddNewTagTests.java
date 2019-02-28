@@ -48,6 +48,7 @@ public class AddNewTagTests {
 
 	@Test (priority=0)
 	public void validLoginTest() {
+		//Admin log in
 		loginRealEstatePOM.sendUserName("admin");
 		loginRealEstatePOM.sendPassword("admin@123");
 		loginRealEstatePOM.clickLoginBtn(); 
@@ -56,18 +57,22 @@ public class AddNewTagTests {
 
 	@Test (priority=1)
 	public void publishTagTest() {
+		//publishing tags method
 		addNewTagPOM.clickPosts();
 		addNewTagPOM.clickTag();
+		//Sending name,slag and description
 		addNewTagPOM.newName("New Launches");
 		addNewTagPOM.newSlag("launch");
 		addNewTagPOM.newDescr("New Launches of vilas, apartments, flats");
 		addNewTagPOM.subFtn();
+		//refresh page to make added tag visible
 		driver.navigate().refresh();
 		screenShot.captureScreenShot("New Tag");
 	}
 	
 	@Test (priority=2)
 	public void tagValidation() {
+		//Text validation
 		String expected = "New Launches";
 		String actual = driver.findElement(By.linkText("New Launches")).getText();
 		Assert.assertEquals(actual, expected);

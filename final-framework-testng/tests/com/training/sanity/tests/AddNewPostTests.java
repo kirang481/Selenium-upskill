@@ -48,6 +48,7 @@ public class AddNewPostTests {
 
 	@Test (priority=0)
 	public void validLoginTest() {
+		//admin log in
 		loginRealEstatePOM.sendUserName("admin");
 		loginRealEstatePOM.sendPassword("admin@123");
 		loginRealEstatePOM.clickLoginBtn(); 
@@ -56,8 +57,10 @@ public class AddNewPostTests {
 
 	@Test (priority=1)
 	public void publishPostsTest() {
+		//methods to publish new posts
 		addNewPostPOM.clickPosts();
 		addNewPostPOM.addNewFtn();
+		//sending title, content and click on publish post methods
 		addNewPostPOM.newTitle("New Launches");
 		addNewPostPOM.contentTextbx("New Launch in Home");
 		addNewPostPOM.publishBtn();
@@ -65,6 +68,7 @@ public class AddNewPostTests {
 	}
 	@Test (priority=2)
 	public void textValidation() {
+		//Text validation
 		String expected = "Post published. View post"; 
 		String actual = driver.findElement(By.xpath("//*[@id=\"message\"]/p")).getText();
 		Assert.assertEquals(expected, actual);

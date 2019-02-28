@@ -49,6 +49,7 @@ public class AddNewCatTests {
 
 	@Test (priority=0)
 	public void validLoginTest() {
+		//Admin log in
 		loginRealEstatePOM.sendUserName("admin");
 		loginRealEstatePOM.sendPassword("admin@123");
 		loginRealEstatePOM.clickLoginBtn(); 
@@ -57,6 +58,7 @@ public class AddNewCatTests {
 
 	@Test (priority=1)
 	public void publishCatgTest() {
+		//Creates new category
 		addNewCatPOM.clickPosts();
 		addNewCatPOM.addNewFtn();
 		addNewCatPOM.newName("New Launches");
@@ -69,6 +71,7 @@ public class AddNewCatTests {
 	
 	@Test (priority=2)
 	public void catgValidation() {
+		//Validates the message after creating new category
 		String expected = "New Launches";
 		String actual = driver.findElement(By.linkText("New Launches")).getText();
 		Assert.assertEquals(actual, expected);

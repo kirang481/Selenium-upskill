@@ -4,7 +4,6 @@ package com.training.sanity.tests;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -49,6 +48,7 @@ public class MoveToTrashTests {
 
 	@Test (priority=0)
 	public void validLoginTest() {
+		//admin log in
 		loginRealEstatePOM.sendUserName("admin");
 		loginRealEstatePOM.sendPassword("admin@123");
 		loginRealEstatePOM.clickLoginBtn(); 
@@ -57,18 +57,23 @@ public class MoveToTrashTests {
 
 	@Test (priority=1)
 	public void deletePosts() {
+		//Delete the posts
 		moveToTrashPOM.clickPosts();
 		moveToTrashPOM.clickAllPosts();
 		moveToTrashPOM.beforeDisplayMtd();
+		//Counting number of items before trash movement
 		moveToTrashPOM.validationItems();
+		//Mouse over an item method
 		moveToTrashPOM.mouseOverPost();
 		moveToTrashPOM.moveTrash();
 		moveToTrashPOM.afterDisplayMtd();
+		//Counting number of items after trash movement
 		moveToTrashPOM.validationItems();
 		screenShot.captureScreenShot("Trash move");
 	}
 	@Test (priority=2)
 	public void textValidation() {
+		//text validation
 		String actual = driver.findElement(By.xpath("//*[@id=\"message\"]/p")).getText();
 		String expected = "1 post moved to the Trash. Undo";
 		Assert.assertEquals(expected, actual);
