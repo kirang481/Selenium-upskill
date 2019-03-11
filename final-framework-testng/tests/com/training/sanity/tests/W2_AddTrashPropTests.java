@@ -1,4 +1,5 @@
 //test case RETC_050
+//To verify whether application allows admin to add property details into trash & display the same
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;

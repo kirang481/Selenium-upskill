@@ -1,4 +1,5 @@
 //test case RETC_020
+//TO Verify whether application allows admin to add new tag
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;

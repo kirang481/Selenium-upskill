@@ -1,4 +1,5 @@
 //test case RETC_019
+//TO Verify whether application allows admin to delete category from the categories page
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;

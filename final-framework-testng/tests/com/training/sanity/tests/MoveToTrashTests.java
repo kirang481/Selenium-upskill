@@ -1,4 +1,5 @@
 //test case RETC_016
+//To verify whether application allows  admin to add the post into trash
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;

@@ -1,4 +1,5 @@
 //test case RETC_047
+//To verify whether application allows admin to add new Feature while adding new property
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;

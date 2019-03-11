@@ -27,7 +27,7 @@ public class W2_AddNewPropPOM {
 	@FindBy(id="content")
 	private WebElement addDescr;
 
-	@FindBy(id="in-property_feature-297")
+	@FindBy(id="in-property_feature-442")
 	private WebElement addFtr;
 
 	@FindBy(id="in-region-24")

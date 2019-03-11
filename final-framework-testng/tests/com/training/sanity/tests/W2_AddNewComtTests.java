@@ -1,4 +1,5 @@
 //test case RETC_049
+//To verify whether application allows admin to reply for the comment added by user
 package com.training.sanity.tests;
 
 import java.awt.AWTException;

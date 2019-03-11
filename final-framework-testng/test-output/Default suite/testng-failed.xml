@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.W2_AddNewRegnTests">
+      <class name="com.training.sanity.tests.W3_AddNewPropTests">
         <methods>
-          <include name="tearDown"/>
-          <include name="publishPropTest"/>
           <include name="setUpBeforeClass"/>
-          <include name="textValidation"/>
+          <include name="publishPropTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.W2_AddNewRegnTests -->
+      </class> <!-- com.training.sanity.tests.W3_AddNewPropTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

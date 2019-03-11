@@ -1,9 +1,12 @@
 //test case RETC_048
+//To verify whether application allows admin to add new Region while adding new property
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -74,7 +77,8 @@ public class W2_AddNewRegnTests {
 		w2_AddNewRegnPOM.moveOverAddReg();
 		//Scroll up to make publish button visible
 		((JavascriptExecutor)driver).executeScript("scroll(0,-500)");
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		//Thread.sleep(2000);
 		w2_AddNewRegnPOM.clickPublish();
 		screenShot.captureScreenShot("New Property with New Region");
 	}

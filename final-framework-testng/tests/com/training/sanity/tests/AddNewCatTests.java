@@ -1,4 +1,5 @@
 //test case RETC_018
+//To verify whether application allows admin to add new category
 package com.training.sanity.tests;
 
 import java.io.FileInputStream;
